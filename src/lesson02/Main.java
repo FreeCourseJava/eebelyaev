@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         long stamp = getStamp(-10);
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        System.out.println("getStamp");
         System.out.println(stamp + "\t" + dateFormat.format(stamp));
 
         System.out.println("changeBalance");
