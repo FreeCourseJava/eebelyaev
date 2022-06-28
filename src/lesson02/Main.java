@@ -16,6 +16,8 @@ public class Main {
 
         System.out.println("increaseBalance");
         System.out.println(increaseBalance(Integer.MAX_VALUE, 0));
+        System.out.println(increaseBalance(Integer.MAX_VALUE, 5));
+        System.out.println(increaseBalance(Integer.MAX_VALUE, -10));
     }
 
     // 1. Написать метод принимающий количество дней (положительное или отрицательное) и возвращающий дату в виде
@@ -30,9 +32,9 @@ public class Main {
     // положительных числа, но получилось отрицательное - вернуть 0
     private static int increaseBalance(int balance, int amount) {
         int res = balance + amount;
-        int shift = Integer.SIZE - 1;
-        int sign = balance >>> shift;
-        if (sign == amount >>> shift && sign != res >>> shift) res = 0;
+        if (balance > 0 && amount > 0 && res < 0) {
+            res = 0;
+        }
         return res;
     }
 
