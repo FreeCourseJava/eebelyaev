@@ -48,7 +48,7 @@ public class Main {
      */
     private static int changeBalance(int balance, int amount) {
         int res = balance + amount;
-        if (res != (long) balance + amount) {
+        if ((long) res != (long) balance + amount) {
             res = 0;
         }
         return res;
