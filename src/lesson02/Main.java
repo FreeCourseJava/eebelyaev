@@ -47,10 +47,10 @@ public class Main {
     не произошло дерьмо с int overflow.
      */
     private static int changeBalance(int balance, int amount) {
-        long res = (long) balance + amount;
-        if (res != (int) res) {
+        int res = balance + amount;
+        if (res != (long) balance + amount) {
             res = 0;
         }
-        return (int) res;
+        return res;
     }
 }
