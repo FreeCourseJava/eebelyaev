@@ -48,7 +48,7 @@ public class Main {
      */
     private static int changeBalance(int balance, int amount) {
         long res = (long) balance + amount;
-        if (res > Integer.MAX_VALUE || res < Integer.MIN_VALUE) {
+        if (res != (int) res) {
             res = 0;
         }
         return (int) res;
