@@ -63,8 +63,8 @@ public class Main {
     private static int[] bubbleSort(int[] arrayInt) {
         int[] result = arrayInt.clone();
         int value;
-        for (int i = result.length; i > 1 ; i--) {
-            for (int j = 0; j < i - 1; j++) {
+        for (int i = 0; i < result.length - 1 ; i++) {
+            for (int j = 0; j < result.length - 1 - i; j++) {
                 if (result[j] > result[j + 1]) {
                     value = result[j];
                     result[j] = result[j + 1];
@@ -81,7 +81,7 @@ public class Main {
         int endIndex = length - 1;
         int middleIndex;
         while (length > 0) {
-            middleIndex = beginIndex + (length >> 1);
+            middleIndex = beginIndex + length / 2;
             if (array[middleIndex] < value) {
                 beginIndex = middleIndex + 1;
             } else if (array[middleIndex] > value) {
